@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Fira Sans Condensed\:200,400,700`,
+          'Fira Sans Condensed\:200,400,700',
         ],
       }
     },

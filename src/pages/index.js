@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import HeroImg from './../../static/hero.jpg'
-import { Section, SectionContainer, HalfContainer } from "./IndexStyles"
+import { Section, SectionContainer, HalfContainer } from "../components/IndexStyles"
 
 
 export default function Home() {

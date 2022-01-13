@@ -20,14 +20,14 @@ export const NavbarContainer = styled.div`
 `
 
 export const LeftWrapper = styled.div`
-width: 50%;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-  img {
-    width: 200px;
-  }
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+    img {
+      width: 200px;
+    }
 `
 
 export const LogoContainer = styled.div`

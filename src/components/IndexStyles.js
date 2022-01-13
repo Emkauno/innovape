@@ -8,7 +8,6 @@ export const Section = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   background-image: linear-gradient(101deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.5) 5%, rgba(255,255,255,0) 47%), url(${props=>props.bgImg && props.bgImg});
   background-size: cover;
   background-repeat: no-repeat;
