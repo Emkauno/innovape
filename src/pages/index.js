@@ -2,6 +2,9 @@ import React from "react"
 import Layout from "../components/Layout"
 import HeroImg from '../images/hero.jpg'
 import SeparatorImg from '../images/separator.svg'
+import ProductsImg from '../images/section1vapes.png'
+import AboutImg from '../images/about.png'
+import ContactImg from '../images/girlvape.png'
 import Button from '../components/common/Button'
 import { Parallax } from 'react-scroll-parallax'
 import { Section, SectionContainer, HalfContainer, Separator } from "../components/IndexStyles"
@@ -30,7 +33,7 @@ export default function Home() {
                 <Button linksrc={'/products'} text={"our products"}/>
               </HalfContainer>
               <HalfContainer>
-                  <img src="../images/section1vapes.png"/>
+                  <img src={ProductsImg}/>
               </HalfContainer>
             </SectionContainer>
           </Section>
@@ -38,7 +41,7 @@ export default function Home() {
           <Section fullWidth={true} className="about">
             <SectionContainer>
               <HalfContainer>
-               <img src="..\images\girlvape.png" alt="girlvape"/>
+               <img src={AboutImg}/>
               </HalfContainer>
             </SectionContainer>
           </Section>
