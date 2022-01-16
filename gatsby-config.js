@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+const path = require(`path`);
 
 module.exports = {
   /* Your site config here */
@@ -17,11 +18,14 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-react-svg",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
-        rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
-    }
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

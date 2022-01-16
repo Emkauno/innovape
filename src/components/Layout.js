@@ -1,14 +1,15 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
 import './layout.css'
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function Layout ( { children} ) {
   return (
     <>
       <Navbar />
-      <div>
+      <ParallaxProvider>
         {children}
-      </div>
+      </ParallaxProvider>
     </>
   )
 }

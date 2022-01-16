@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Logo from './../../../static/assets/logo-dark.svg'
+import Logo from '../../images/logo-dark.svg'
 import { 
   NavbarWrapper,
   NavbarContainer,
@@ -22,8 +22,8 @@ function Navbar() {
         </LeftWrapper>
         <LinksWrapper>
           <Link to="/">Home</Link>
+          <Link to="/products">Our products</Link> 
           <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
         </LinksWrapper>
       </NavbarContainer>
