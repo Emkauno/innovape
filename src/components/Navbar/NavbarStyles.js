@@ -56,13 +56,12 @@ flex-direction: row;
 justify-content: flex-end;
 align-items: center;
   a {
-    width: 20%;
     text-align: right;
     text-decoration: none;
     font-weight: 200;
     color: black;
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 40px;
     }
   }
 `

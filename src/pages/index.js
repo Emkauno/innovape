@@ -21,7 +21,7 @@ export default function Home() {
               </HalfContainer>
           </SectionContainer>
         </Section>
-        <Parallax y={[10, -30]}>
+        <Parallax y={[10, -20]}>
           <Section fullWidth={true} className="products">
             <Separator>
              <SeparatorImg/>
@@ -29,7 +29,7 @@ export default function Home() {
             <SectionContainer>
               <HalfContainer className="left">
                 <h2>FIND THE <span>PERFECT MATCH</span></h2>
-                <p>FOR YOUR VAPING EXPERIENCE</p>
+                <p>for your vaping experience</p>
                 <Button linksrc={'/products'} text={"our products"}/>
               </HalfContainer>
               <HalfContainer>
@@ -38,13 +38,42 @@ export default function Home() {
             </SectionContainer>
           </Section>
         </Parallax>
-          <Section fullWidth={true} className="about">
+        <Parallax y={[-30, 0]}>
+          <Section fullWidth={true} className="about upper">
             <SectionContainer>
+              <HalfContainer className="corner">
+                <img src={AboutImg}/>
+              </HalfContainer>
               <HalfContainer>
-               <img src={AboutImg}/>
+                <h2>WANT TO KNOW MORE?</h2>
+                <p>Whether you're new to vaping or an experienced vaper, our goal is to provide you with the best quality at the best possible prices.</p>
+                <Button linksrc={'/about'} text={"about us"}/>
               </HalfContainer>
             </SectionContainer>
           </Section>
+        </Parallax>
+        <Parallax y={[25, 0]}>
+          <Section fullWidth={true} className="contact">
+            <SectionContainer>
+              <HalfContainer className="contact">
+                <h2>GET IN TOUCH</h2>
+                <form class="contact-form">
+                  <label>Name</label>
+                  <input type="text" name="user_name"/>
+                  <label>Email</label>
+                  <input type="email" name="user_email"/>
+                  <label>Message</label>
+                  <textarea name="message"></textarea>
+                  <input type="submit" value="Send"/>
+                </form>
+              </HalfContainer>
+            </SectionContainer>
+            <Section className="girlvape">
+              <img src={ContactImg}  />
+            </Section>
+          </Section>
+        </Parallax>
+       
     </Layout>
   )
 }

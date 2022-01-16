@@ -23,7 +23,6 @@ export const Section = styled.section`
     background-image: unset;
     background: white;
     align-items: flex-start;
-    height: 550px;
     h2 {
       margin-bottom: 8px;
     }
@@ -33,10 +32,74 @@ export const Section = styled.section`
     }
   }
   &.about {
+    height: 300px;
     background: white;
+    background-image:  url(${props=>props.bgImg && props.bgImg});
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 300px;
+    &.upper {
+        h2 {
+        margin-bottom: 8px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &.contact {
+    background: transparent;
+    h2{
+      text-align: right;
+    }
+    .contact-form{
+      width: 400px;
+      background: rgba(255,255,255,.3);
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 24px;
+      label {
+        margin-bottom: 8px;
+        padding-left: 16px;
+        font-weight: 400;
+      }
+      input {
+        width: 100%;
+        height: 35px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 0 16px;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        &:not(:last-child){
+          margin-bottom: 8px;
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 140px;
+        resize: none;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-bottom: 24px;
+        padding: 8px 16px;
+        font-family: 'Fira Sans Condensed', sans-serif; 
+      }
+    }
   }
   a {
     text-decoration: none;
+  }
+  &.girlvape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
   }
 `
 export const SectionContainer = styled.div`
@@ -47,6 +110,7 @@ export const SectionContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
 `
 
 
@@ -58,6 +122,20 @@ export const HalfContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  &.contact {
+    width: unset;
+    h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  }
+  &.corner {
+    align-items: flex-start;
+    img {
+      width: 50%;
+    }
+  }
   &.left {
     align-items: flex-start;
   }
@@ -95,12 +173,16 @@ export const HalfContainer = styled.div`
 `
 export const Separator = styled.div`
  position: absolute;
- top: -45px;
+ top: -55px;
  width: 100%;
+ z-index: -1;
  @media(max-width: 1600px){
-   top: -35px;
+   top: -50px;
  }
- @media(max-width: 750px){
-   top: -20px;
+ @media(max-width: 800px){
+   top: -40px;
+ }
+ @media(max-width: 600px){
+   top: -30px;
  }
 `
